@@ -7,7 +7,7 @@ $aksi = $_GET['aksi'];
  	$db->input($_POST['nama'],$_POST['alamat'],$_POST['usia']); //panggil method input dari class database
  	header("location:tampil.php");
  }elseif($aksi == "hapus"){ 	
- 	$db->hapus($_POST['id']); //panggil method hapus dari class database
+ 	$db->hapus($_GET['id']); //panggil method hapus dari class database
 	header("location:tampil.php");
  }elseif($aksi == "update"){
  	$db->update($_POST['id'],$_POST['nama'],$_POST['alamat'],$_POST['usia']); //panggil method update dari class database
